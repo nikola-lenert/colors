@@ -1,4 +1,4 @@
-# colors
+# Colors task
 
 ## Project setup
 ```
