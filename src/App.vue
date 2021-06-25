@@ -45,7 +45,7 @@
                 </b-form-input>
               </b-input-group>
 
-              <b-button class="ml-2" type="submit" variant="outline-primary">Add</b-button>
+              <b-button class="ml-2" style="white-space: nowrap" type="submit" variant="outline-primary">Set active</b-button>
             </div>
 
             <small v-if="colorFormError" class="text-danger">{{ colorFormError }}</small>
@@ -129,7 +129,7 @@ export default {
           return
         }
         this.storeCurrentAndSetNewActiveColor(response.data.new_color)
-      }, error => this.fetchColorError = FETCH_COLOR_ERROR).finally(() => this.loading = false)
+      }, () => this.fetchColorError = FETCH_COLOR_ERROR).finally(() => this.loading = false)
     },
     onColorFormSubmit() {
       this.colorFormError = null
